@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Add Item</h1>
-    <form action="{{ route('items.store') }}" method="POST">
+    <form action="{{ route('items.store') }}" method="POST"> <!--route('items.store') → Mengarahkan permintaan ke route 'items.store', yang akan memanggil metode store() di ItemController.-->
         @csrf
         <label for="name">Name:</label>
         <input type="text" name="name" required>

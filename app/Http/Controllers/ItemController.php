@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use Illuminate\Http\Request;
 
-class ItemController extends Controller
+class ItemController extends Controller //kelas yang merupakan turunan dari Controller, sehingga dapat menggunakan fitur bawaan Laravel untuk controller.
 {
     public function index()
     {
         $items = Item::all();
-        return view('items.index', compact('items'));
+        return view('items.index', compact('items')); //Mengirimkan data ke tampilan items.index dengan menggunakan compact('items').
     }
 
     public function create()

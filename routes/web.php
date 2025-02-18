@@ -13,8 +13,9 @@ use App\Http\Controllers\ItemController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { //Menampilkan halaman welcome.blade.php.
+
     return view('welcome');
 });
 
-Route::resource('items', ItemController::class);
+Route::resource('items', ItemController::class); // Otomatis membuat semua route CRUD untuk ItemController, sehingga kita tidak perlu menuliskannya satu per satu.  

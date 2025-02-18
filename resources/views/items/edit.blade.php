@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Edit Item</h1>
-    <form action="{{ route('items.update', $item) }}" method="POST">
+    <form action="{{ route('items.update', $item) }}" method="POST"> <!--Mengirim permintaan ke items.update, yang akan memanggil metode update() di ItemController.-->
         @csrf
         @method('PUT')
         <label for="name">Name:</label>
